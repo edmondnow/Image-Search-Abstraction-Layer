@@ -1,7 +1,11 @@
+/*
+This NodeJS module gets data from the Flickr API. See documentation below:
+https://www.flickr.com/services/api/flickr.photos.search.html
+
+*/
 const https = require('https');
 const key = "309a8677c0e619af8c789ec7f71dfcde";
 const secret = "d602f310f3368642";
-
 
 
 var photoGet = function(text, per_page, page){
@@ -18,7 +22,6 @@ return new Promise(function(resolve, reject){
    
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
-      console.log(JSON.parse(data));
       resolve(JSON.parse(data));
     });
    
