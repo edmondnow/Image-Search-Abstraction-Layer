@@ -9,8 +9,14 @@ const HistoryEntry = require("./models/history.js");
 //console.log(exampleObj.photos.photo[0].title); //test obj returned from flick API
 
 
-
-app.get('/photosearch', function(req, res){
+app.get('', function(req, res){
+ res.writeHead(200, {"Content-Type":"text/html"});
+ var index = fs.createReadStream('public/index.html', 'utf8');
+  index.pipe(res);  
+});
+     
+     
+app.get('/search', function(req, res){
 	console.log(req.query.text);
 	var text = req.query.text;
 	var per_page = req.query.per_page

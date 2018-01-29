@@ -3,10 +3,37 @@
 <html>
 <head>
 	<title>Image Search Abstraction Layer</title>
-	<a href="./assets/styles.css" type="text/css" rel="stylesheet"></a>
+	<style>
+	div{
+		width: 50%;
+		margin: 0 20%;
+	}
+	code {
+		color: red;
+	}
+	</style>
 </head>
 <body>
-	<h1>PhotoSearch</h1>
+<div>
+	<h1>FreeCodeCamp API: Image Abstraction Layer</h1>
+	<h3>User Stories: </h3> <br />
+	<ul>
+		<li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string. </li> <br />
+		<li>I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li> <br />
+		<li>I can get a list of the most recently submitted search strings.</li> <br />
+	</ul>
+
+	<h2> Example input </h2>
+	<code> https://searchforthis.glitch.me/search?text=cow&per_page=1&page=2 </code>
+	<h2> Example output </h2>
+	<code> [{"url":"https://farm5.staticflickr.com/4698/26097163758_c714053896.jpg","title":"Mercer Vu Farms in Franklin County, Pa."}] </code>
+	<h2> Example history input </h2>
+	<code>https://searchforthis.glitch.me/history?number=2</code>
+	<h2> Example history output </h2>
+	<code>[{"_id":"5a6f54552e8cf23b358e709c","time":"2018-01-29T17:05:25.825Z","__v":0},{"_id":"5a6f547a2e8cf23b358e709d","text":"cow","time":"2018-01-29T17:06:02.533Z","__v":0}</code>
+
+</div>
+</body>
 
 </body>
 </html>
